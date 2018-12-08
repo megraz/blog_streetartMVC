@@ -10,6 +10,7 @@
 <h1><?=$article['id']?></h1>
 <h2><?=$article['titre']?></h2>
 <strong><?=$article['date']?></strong>
+<strong><?=$article['commentaire']?></strong>
 <?php
 //print_r($articles);
 ?>

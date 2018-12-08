@@ -11,6 +11,7 @@ function connectDB() {
 }
 
 function get_all_articles() {
+    //connexion bdd
     $pdo = connectDB();
     //preparation requete sql en texte
     $sql= "SELECT * FROM post;";
@@ -56,7 +57,7 @@ function getAllCategories() {
     return $results;
 }
 
-function add_article($titre, $date, $nom, $commentaire, $categorie_idcategorie) { //$name = le titre de mon article
+function add_article($titre, $date, $nom, $commentaire, $categorie_idcategorie) { 
     //se connecterà la bdd
     $pdo = connectDB();
     //preparer une requete insert au format texte
@@ -67,6 +68,16 @@ function add_article($titre, $date, $nom, $commentaire, $categorie_idcategorie) 
     $statement->bindValue(':nom', $nom);
     $statement->bindValue(':commentaire', $commentaire);
     $statement->bindValue(':categorie_idcategorie', $categorie_idcategorie);
+    $statement->execute();
+}
+
+function delete_post($id) {
+    //se connecter à la bdd
+    $pdo = connectDB();
+    //preparer une requete insert au format texte
+    $sql = "DELETE FROM post WHERE id=:id;";
+    $statement = $pdo->prepare($sql);
+    $statement->bindValue(':id', $id);
     $statement->execute();
 }
 
