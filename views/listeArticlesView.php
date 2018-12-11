@@ -26,7 +26,8 @@
             <td><?=$article['titre']?></td>
             <td><?=$article['date']?></td>
             <td><a href="detailController.php?id=<?=$article['id']?>">Voir le détail</a></td>
-            <td><a href="deleteController.php?id=<?=$article['id']?>">Supprimer</a>
+            <td><a href="deleteController.php?id=<?=$article['id']?>">Supprimer</a></td>
+            <td><a href="updateFormController.php?id=<?=$article['id']?>">Modifier</a></td>
         </tr>
         <?php   } ?>
     </tbody>

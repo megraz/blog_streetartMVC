@@ -89,6 +89,42 @@ function delete_article($id) {
     $statement->execute();
 }
 
+function get_article_by_id($id) { //pr update
+   $pdo = connectDB();
+   //preparation requete sql en texte
+   $sql= "SELECT * FROM article WHERE id=:id;";
+   //transformer en vrai requete preparer
+   $statement = $pdo->prepare($sql);
+   //bindvalue
+   $statement->bindValue(':id', $id, FILTER_VALIDATE_INT);//PR L'UPDATE - FILTER_VALIDATE_INT est utilisé pour valider la valeur en nombre entier
+   //execution
+   $statement->execute();
+   //fetchall
+   $results = $statement->fetch(); //pas de fetchAll puisqu'on ne veut récup qu'un article
+   //fermer la connexion
+   $pdo = null;
+   //renvoyer les donnees
+   return $results;
+}
+
+function update_article($id, $titre, $commentaire) {
+   /*echo $id;
+   echo "<br>".$titre;
+   echo "<br>".$commentaire;
+   die();*/
+   $pdo = connectDB();
+   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   //preparer une requete update au format texte
+   //$sql ="UPDATE article  SET titre=' ".$titre." ', commentaire=' ".$commentaire." ' WHERE id=:id; ";
+   $sql ="UPDATE article  SET titre=' ".$titre." ', commentaire=' ".$commentaire." ' WHERE id=:id; ";
+   $statement = $pdo->prepare($sql);
+   $statement->bindValue(':id', $id);
+   //$statement->bindValue(':titre', $titre); // je n'utilise pas le titre dc pas besoin de le mettre
+   //$statement->bindValue(':commentaire', $commentaire); //idem commentaire
+   $statement->execute();
+}
+
+
 function transfert() {
     $pdo = connectDB();
     /* Vérification de la connexion */ 
