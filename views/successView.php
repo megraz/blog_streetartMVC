@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,11 @@
     <title>Blog - Liste des articles</title>
 </head>
 <body>
+    <div class="container" style="height:500px">
     <h1>Bravo ! </h1>
-    <a href="listeController.php">Retour au article</a>
+    <br /><br />
+    <a href="../controllers/listeController.php">Retour aux articles</a>
+    </div>
+<?php include("footer.php"); ?>
 </body>
 </html>

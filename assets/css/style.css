@@ -1,0 +1,182 @@
+body {
+    font-family: 'Allerta Stencil', sans-serif;
+    /* background-color: #aeafac; */
+    background-image: linear-gradient(to right, #f4f5f4, #a4a5a2);
+    /*#9a9b98*/
+}
+
+h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+
+/* .col-md-6 {
+    background-color: #99f5db;
+    margin-top: 10px;
+} */
+
+
+/*Pr la rotation du titre h1*/
+
+.spray {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.1); */
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+
+/*Header*/
+
+.bg-dark {
+    background-color: #00e7a5 !important;
+}
+
+.navbar {
+    /*pr modif la hauteur de la navbar*/
+    height: 80px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Footer*/
+
+
+/* html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+html {
+    background: #0e1a25;
+    font-size: 0.625em;
+} */
+
+
+/* #contact {
+    box-sizing: border-box;
+} */
+
+
+/* *,
+*:before,
+*:after {
+    box-sizing: inherit;
+} */
+
+#contact {
+    background: #0e1a25;
+    font-size: 0.625em;
+    margin-top: 50px;
+}
+
+.soc {
+    display: block;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 48px;
+    padding: 4.8rem;
+    text-align: center;
+}
+
+.soc li {
+    display: inline-block;
+    margin: 12px;
+    margin: 1.2rem;
+}
+
+.soc a,
+.soc svg {
+    display: block;
+}
+
+.soc a {
+    position: relative;
+    height: 96px;
+    height: 9.6rem;
+    width: 96px;
+    width: 9.6rem;
+}
+
+.soc svg {
+    height: 100%;
+    width: 100%;
+}
+
+.soc em {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: -0.75em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.icon-8:hover,
+.icon-13:hover,
+.icon-17:hover,
+.icon-26:hover {
+    border-radius: 100%;
+    color: #0e1a25;
+    fill: #0e1a25;
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.icon-8 {
+    color: #6ed926;
+    fill: #6ed926;
+}
+
+.icon-8:hover {
+    background: #6ed926;
+}
+
+.icon-13 {
+    color: #26d991;
+    fill: #26d991;
+}
+
+.icon-13:hover {
+    background: #26d991;
+}
+
+.icon-17 {
+    color: #2691d9;
+    fill: #2691d9;
+}
+
+.icon-17:hover {
+    background: #2691d9;
+}
+
+.icon-26 {
+    color: #d926b5;
+    fill: #d926b5;
+}
+
+.icon-26:hover {
+    background: #d926b5;
+}

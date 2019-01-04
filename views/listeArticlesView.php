@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,36 +8,45 @@
     <title>Blog Liste des articles</title>
 </head>
 <body>
-<table>
-    <thead>
-        <tr>
-            <th>id</th>
-            <th>titre</th>
-            <th>date</th>
-            <th>Voir</th>
-            <th>Supprimer</th>
-        </tr>
-    </thead>
-    <tbody>
+    <div class="row" style="overflow:hidden;">
+    <div class="col-md-12 text-center">
+    <h1>Liste des articles</h1>
+    </div>
+    </div>
     <?php foreach($articles as $article) {
         ?>
-  
-        <tr>
-            <td><?=$article['id']?></td>
-            <td><?=$article['titre']?></td>
-            <td><?=$article['date']?></td>
-            <td><a href="detailController.php?id=<?=$article['id']?>">Voir le détail</a></td>
-            <td><a href="deleteController.php?id=<?=$article['id']?>">Supprimer</a></td>
-            <td><a href="updateFormController.php?id=<?=$article['id']?>">Modifier</a></td>
-        </tr>
-        <?php   } ?>
-    </tbody>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-1"><p>id<?=$article['id']?></p></div>
+                        <div class="col-md-3"><p>titre<?=$article['titre']?></p></div>
+                        <div class="col-md-3"><p>date<?=$article['date']?></p></div>
+                        <div class="col-md-5"><img src='../photos/<?=$article['photo']?>' width='200px' height='200px'/></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-4"><a href="../controllers/detailController.php?id=<?=$article['id']?>">Voir le détail</a></div>
+                        <div class="col-md-4"><a class="btn btn-primary" href="../controllers/updateFormController.php?id=<?=$article['id']?>">Modifier</a></div>
+                        <div class="col-md-4"><a class="btn btn-danger" href="../controllers/deleteController.php?id=<?=$article['id']?>">Supprimer</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</table>
-<a href="formAjoutController.php">Ajouter un article</a>
+
+
+        <?php   } ?>
+    <div class="row">
+        <div class="col-md-12 text-center">
+        <br /><br />
+            <a class="btn btn-success" href="../controllers/formAjoutController.php">Ajouter un article</a>
+        </div>
+    </div>
 <?php
 //print_r($articles);
 ?>
-    
+<?php include("footer.php"); ?> 
 </body>
 </html>

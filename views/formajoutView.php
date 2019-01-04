@@ -1,6 +1,8 @@
+<?php include("header.php"); ?>
+<div class="container" >
 <h1>Créer un article</h1>
 <!--enctype="multipart/form-data" permet de prévenir le navigateur qu'il s'apprête à envoyer des fichiers-->
-<form action="processFormController.php" method="POST" enctype="multipart/form-data">
+<form action="../controllers/processFormController.php" method="POST" enctype="multipart/form-data">
     <label for="title">Titre</label>
     <input id="titre" class="form-control" name="titre" type="text">
     <br /><br /> 
@@ -23,9 +25,12 @@
                 }
             ?>
     </select>
-    <input type="submit" name="ok" value="Envoyer">
+    <br /><br />
+    <input type="submit" class="btn btn-warning" name="ok" value="Envoyer">
 </form>
 </div>
 <div class="col-md-3"></div>
 </div>
 </div>
+</div>
+<?php include("footer.php"); ?>
