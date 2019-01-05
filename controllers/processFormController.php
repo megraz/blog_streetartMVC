@@ -17,7 +17,7 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
     // Testons si l'extension est autorisée
     $infosfichier = pathinfo($_FILES['photo']['name']);
     $extension_upload = $infosfichier['extension'];
-    $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+    $extensions_autorisees = array('jpg', 'jpeg', 'JPG', 'gif', 'png');
     if (in_array($extension_upload, $extensions_autorisees))
     {
       // On peut valider le fichier et le stocker définitivement
