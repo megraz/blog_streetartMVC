@@ -30,12 +30,19 @@ ini_set('error_log', dirname(__file__) . '/log_error_php.txt');
     }
   }
 }
-   if(!empty($_POST['titre']) && !empty($_POST['commentaire']) ) {
+  //$date = date('Y-m-d H:i:s');
+  //$date = new DateTimeZone('Europe/Paris');
+  //date_default_timezone_set('Europe/Paris'); 
+  $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
+  $date = $date->format('Y-m-d H:i:s');
+  //echo $date; 
+   if(!empty($_POST['titre']) && !isset($_POST['date']) && !empty($_POST['commentaire'])) {
        
         $titre = filter_var($_POST['titre'], FILTER_SANITIZE_STRING);
+        //$date = filter_var($_POST['date'], FILTER_SANITIZE_STRING);
         $commentaire = filter_var($_POST['commentaire'], FILTER_SANITIZE_STRING);
         $photo = filter_var(basename($_FILES['photo']['name']),FILTER_SANITIZE_STRING,FILTER_NULL_ON_FAILURE);
-        add_article($titre,  $commentaire, $photo);
+        add_article($titre, $date, $commentaire, $photo);
         include("../views/successView.php");
    } else {
     //    header("Location: formAjoutController.php");

@@ -58,16 +58,17 @@ function getAllCategories() {
     return $results;
 }
 //************mettre photo et modif apres processFormController.php nb sauvegarde sur brouillon.php ***********/
-function add_article($titre, $commentaire, $photo) { 
+function add_article($titre,$date, $commentaire, $photo) { 
    //echo "<br /> $titre";
    //echo "<br /> $commentaire";
     //se connecterà la bdd
     $pdo = connectDB();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //preparer une requete insert au format texte
-    $sql ="INSERT INTO  article (titre, commentaire, photo ) VALUES (:titre, :commentaire, :photo);";
+    $sql ="INSERT INTO  article (titre, date, commentaire, photo ) VALUES (:titre, :date, :commentaire, :photo);";
     $statement = $pdo->prepare($sql);
     $statement->bindValue(':titre', $titre);
+    $statement->bindParam(':date', $date, strtotime (date ('Y-m-d H:i:s')), PDO::PARAM_STR);
     $statement->bindValue(':commentaire', $commentaire);
     $statement->bindValue(':photo', $photo);
    try{
