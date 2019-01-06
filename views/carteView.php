@@ -12,7 +12,7 @@
       <h1>Où trouver les oeuvres</h1>
       <div class="row" style="whidth: 100%; height: 500px;">
           <div class="col-md-12">
-          <iframe width="100%" height="100%" frameBorder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/street-art-lyon_279075#14/45.7578/4.8321"></iframe>
+          <iframe width="100%" height="100%" frameBorder="0" allowfullscreen src="http://umap.openstreetmap.fr/fr/map/street-art_279870?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe><p><a href="http://umap.openstreetmap.fr/fr/map/street-art_279870">Voir en plein écran</a></p>
           </div>
       </div>
   </div>
