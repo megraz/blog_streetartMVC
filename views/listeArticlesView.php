@@ -22,7 +22,7 @@
                         <div class="col-md-1"><p>id<?=$article['id']?></p></div>
                         <div class="col-md-3"><p>titre<?=$article['titre']?></p></div>
                         <div class="col-md-3"><p>date<?=$article['date']?></p></div>
-                        <div class="col-md-5"><img src='../photos/<?=$article['photo']?>' width='200px' height='200px'/></div>
+                        <div class="col-md-5"><img src='../photos/<?=$article['photo']?>' width='200px' height='auto'/></div>
                     </div>
                 </div>
                 <div class="col-md-3">

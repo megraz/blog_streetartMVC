@@ -8,13 +8,21 @@
     <title>Blog Liste des articles</title>
 </head>
 <body>
-<div class="container" style="height:500px">
+<div class="container" ><!--<div class="container" style="height:500px">-->
     <div class="row">
         <div class="col-md-12 ">
             <h1><?=$article['id']?></h1>
             <h2><?=$article['titre']?></h2>
             <strong><?=$article['date']?></strong>
             <strong><?=$article['commentaire']?></strong>
+        </div>
+    </div>
+    <br /><br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><img src='../photos/<?=$article['photo']?>' width='500px' height='auto'/></div>
+            <div class="col-md-4"></div>
         </div>
     </div>
     <br /><br />

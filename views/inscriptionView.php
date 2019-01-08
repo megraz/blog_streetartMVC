@@ -14,8 +14,9 @@
             <div class="card text-white bg-secondary mb-3"> <!--card text-white bg-dark mb-3 prend la mm couleur que le header-->
                 <h4 class="card-header">Inscription</h4>
                 <div class="card-body">
-                    <form method="POST" action="../controllers/processFormController.php"><!--A changer-->
-                        <input type="hidden" name="_token" value="TKkkfDdg5Cs9UkHZci8u5mFmRKCXJ9T5qFhxQMEo"><!--vérif les token-->
+                    <form method="POST" action="../controllers/processFormController.php"><!--A changer <form method="POST" action="../controllers/processFormController.php">-->
+                    <!-- <form method="POST" action="../controllers/registerController.php">    -->
+                        <input type="hidden" id="custId" name="custId" value="">
                         <div class="form-group">
                             <label for="name">Nom</label>
                             <input id="name" type="text" class="form-control" name="name" value="" required>

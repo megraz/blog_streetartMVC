@@ -15,8 +15,7 @@
                 <h4 class="card-header">Connexion</h4>
                 <div class="card-body">
                     <form method="POST" action="../controllers/processFormController.php"><!--A changer-->
-                        <input type="hidden" name="_token" value="ufHCmMnuP8DJMD0zOq73bFvboi9eZUCrCmd1Oqvv"><!--vérif les token-->
-                        <div class="form-group">
+                        <input type="hidden" id="custId" name="custId" value="">                        <div class="form-group">
                             <label for="email">Adresse email</label>
                             <input id="email" type="email" class="form-control" name="email" value="" required>
                         </div>            
